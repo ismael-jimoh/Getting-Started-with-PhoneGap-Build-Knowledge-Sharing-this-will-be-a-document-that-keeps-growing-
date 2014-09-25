@@ -1,0 +1,115 @@
+Getting Started with PhoneGap Build:
+Go to PhoneGap Build website and register for an account.
+Decide if you want a free account or paid account.
+Paid subscriptions take from a few hours to latest 48 hours to be effected. So contact the support team if it hasn't after this time(note that holidays might affect this I'm not sure but it could happen)
+Sign In with your Adobe ID(This will soon be effected as they are moving away from usage of Email for authentication to using Adobe ID).
+
+Before we start let us clear some things and differentiate others.
+
+1. This is NOT the official PhoneGap Build documentation.
+2. This is just to help I am not charging anyone for the usage of this documentation but would appreciate it being recommended.
+3. There is a difference between PhoneGap, Cordova and PhoneGap Build(PGB).
+   PhoneGap is a distro of Cordova apache project and though cordova commandscan be used in apps created with PhoneGap, you can't doe the same if your app was created with PhoneGap(vice versa).
+   Lastly, PhoneGap and Cordova should only be used when you are building your app locally on your machine rather than the cloud service.
+   The cloud service metioned above is PhoneGap Build and it is very different from PhoneGap.
+   New versions of PhoneGap Build will only be released after a corresponding version of PhoneGap so DO NOT query when a specific version of PGB will be released when the version for PhoneGap has not yet been released.
+   As much as you can reference documents for PhoneGap to learn to use the APIs, I will recommend you are wary and use at your own risk any documents on configuring your config.xml mentioned in the PhoneGap docs that is not mentioned in PhoneGap Build.
+   
+//I will be adding in more of these as time goes and I maintain this repository, I hope it serves as a learning platform for us all.
+ 
+Creating your first app:
+ 
+There are numerous ways for creating/ submitting an app on PhoneGap Build and I will go through each of them as best as I can mentioning potential issues:
+
+1. Submitting an zipped copy of your app to PGB Site.
+
+Create a folder and name it after your project.
+Create your project's HTML, CSS and JavaScript content.
+Add in a reference calling phonegap.js to the HTML pages(DO NOT add the actual files. Also to avoid confusion, I will be using phonegap.js for PhoneGap Build and cordova.js for all forms of local build).
+Add in your config.xml.
+Validate all your files and fix any issues that show up.
+For people worried about security(Will be writing a whole section about this in the future), encapsulate all your validated files.
+Zip your project folder and upload to PhoneGap Build.
+
+Drawbacks of this way:
+It can't be automated.
+If you have a free account, you are limited to just one app.
+More difficult for versioning as you could have lots of version of your app hanging around on your desktop.
+
+Positives about it:
+Easier to maintain and recommended for beginners or people who do not want to have a git account.
+Also it's always a private app unless you state otherwise, hence more secure than most methods.
+
+2. Submit app via GitHub or Public Repositories:
+Install GitHub on your system(recommend installing the GUI program though it's possible to use command as well).
+Register/create an account with teh repositor, in this case I will be going with GitHub.
+Link your git account to your PhoneGap Build account.
+Create the app and sync to github.
+Create a new app from phonegap site and select public app.
+Now link to the app from list available from drop down or by copying the URL from the git account.(Ensure the link always ends with .git else it would not work)
+Once ready, it should build your app.
+
+Drawbacks of this method:
+Apps can be publicly viewed(I mean the source code).
+
+Positives about it:
+You are allowed unlimited public apps.
+
+3. Submit app Via API:
+
+Sorry not familiar with is method, would recommend you read at the official API documentation on PhoneGap Build site.
+
+Positives about this:
+
+Apps submission can be automated.
+Restrictions of section 1 still apply though. 
+
+Comming soon
+
+//Add a sample config.xml
+//Disclamer, these are likely to change in the future, I would recommend always referencing www.docs.build.phonegap.com
+
+Difference PhoneGap Build 2.9.0 and 3.X.X and rules on upgrading your app:
+
+Since the release of PhoneGap Build 3.0.0, support for various platforms supported in 2.9.0 was dropped(I mean you cannot build for said platform but issues with it still supported by the support team).
+
+Platforms affected were, Blackberry, Symbian and WebOS.
+
+The drop was due to the lack of usage/ development for the platforms in question allowing the PhoneGap Build team to be able to focus resources on improving the 3 most used platforms namely; iOS, Android and Windows Phone.
+
+Note: PhoneGap Build doesn't support Windows at all, neither should you expect support from the support staff for it, this and other platforms(dropped and some new ones like Mozilla) are supported by PhoneGap/Cordova.
+
+It is recommended you update your apps to later versions if you are
+
+
+Creating your signing Key
+
+iOS:
+
+Go to iOS Developer Site(https://developer.apple.com/ios/manage/overview/index.action).
+Pay the developer license fee of $100(you can't develop for iOS without this)
+
+On Windows: http://www.iandevlin.com/blog/2012/11/phonegap/building-an-ios-signing-key-for-phonegap-in-windows
+On Mac: https://coderwall.com/p/eceasa
+
+
+Android:
+
+Ensure you have Java Installed and added to your environment variables
+Add android SDK and add to Environment variables.
+Test various installations by running the following commands individually: javac for Java, ant for ant, android for android SDK.
+Once all the above pass, run the following command: 
+
+keytool -genkey -v -keystore [my-release-key.keystore] -alias [alias_name] -keyalg RSA -keysize 2048 -validity 10000 //The [] are not a part of the code they just signify things user should change. You can increase the validity to as long as you like but think all properties the way they are.
+
+Windows Phone
+
+Coming soon.....
+
+
+Creating your Config.xml file:
+
+
+Uploading your PhoneGap(Apps built locally to PhoneGap Build)
+
+Plugins Things to Note
