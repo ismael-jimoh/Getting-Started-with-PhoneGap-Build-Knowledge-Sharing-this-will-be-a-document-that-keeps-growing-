@@ -1,10 +1,10 @@
-Getting Started with PhoneGap Build:
+<b>Getting Started with PhoneGap Build:</b>
 Go to PhoneGap Build website and register for an account.
 Decide if you want a free account or paid account.
 Paid subscriptions take from a few hours to latest 48 hours to be effected. So contact the support team if it hasn't after this time(note that holidays might affect this I'm not sure but it could happen)
 Sign In with your Adobe ID(This will soon be effected as they are moving away from usage of Email for authentication to using Adobe ID).
 
-Before we start let us clear some things and differentiate others.
+<b>Before we start let us clear some things and differentiate others.</b>
 
 1. This is NOT the official PhoneGap Build documentation.
 2. This is just to help I am not charging anyone for the usage of this documentation but would appreciate it being recommended.
@@ -17,11 +17,11 @@ Before we start let us clear some things and differentiate others.
    
 //I will be adding in more of these as time goes and I maintain this repository, I hope it serves as a learning platform for us all.
  
-Creating your first app:
+<b>Creating your first app:</b>
  
 There are numerous ways for creating/ submitting an app on PhoneGap Build and I will go through each of them as best as I can mentioning potential issues:
 
-1. Submitting an zipped copy of your app to PGB Site.
+1. <b>Submitting an zipped copy of your app to PGB Site</b>.
 
 Create a folder and name it after your project.
 Create your project's HTML, CSS and JavaScript content.
@@ -40,7 +40,7 @@ Positives about it:
 Easier to maintain and recommended for beginners or people who do not want to have a git account.
 Also it's always a private app unless you state otherwise, hence more secure than most methods.
 
-2. Submit app via GitHub or Public Repositories:
+2. <b>Submit app via GitHub or Public Repositories</b>:
 Install GitHub on your system(recommend installing the GUI program though it's possible to use command as well).
 Register/create an account with teh repositor, in this case I will be going with GitHub.
 Link your git account to your PhoneGap Build account.
@@ -55,7 +55,7 @@ Apps can be publicly viewed(I mean the source code).
 Positives about it:
 You are allowed unlimited public apps.
 
-3. Submit app Via API:
+3. <b>Submit app Via API</b>:
 
 Sorry not familiar with is method, would recommend you read at the official API documentation on PhoneGap Build site.
 
@@ -69,7 +69,7 @@ Comming soon
 //Add a sample config.xml
 //Disclamer, these are likely to change in the future, I would recommend always referencing www.docs.build.phonegap.com
 
-Difference PhoneGap Build 2.9.0 and 3.X.X and rules on upgrading your app:
+<b>Difference PhoneGap Build 2.9.0 and 3.X.X and rules on upgrading your app</b>:
 
 Since the release of PhoneGap Build 3.0.0, support for various platforms supported in 2.9.0 was dropped(I mean you cannot build for said platform but issues with it still supported by the support team).
 
@@ -93,7 +93,7 @@ On Windows: http://www.iandevlin.com/blog/2012/11/phonegap/building-an-ios-signi
 On Mac: https://coderwall.com/p/eceasa
 
 
-Android:
+<b>Android</b>:
 
 Ensure you have Java Installed and added to your environment variables
 Add android SDK and add to Environment variables.
@@ -110,6 +110,15 @@ Coming soon.....
 Creating your Config.xml file:
 
 
-Uploading your PhoneGap(Apps built locally to PhoneGap Build)
+Uploading your PhoneGap(Apps built locally to PhoneGap Build):
 
-Plugins Things to Note
+If you are building your app on CLI(localy), you can either run the code:
+
+<i>phonegap remote build</i>//Submits app to PGB website, might require that you sign in so ensure you have an account.
+
+The alternative to this is submitting the WWW folder only(I mean the one found in projectName/www).
+
+Advise, visit PGB web site to ensure the app is correctly built(VERY IMPORTANT).
+
+<b>Plugins Things to Note</b>:
+
